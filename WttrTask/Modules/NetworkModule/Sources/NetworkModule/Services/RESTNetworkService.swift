@@ -9,11 +9,11 @@ import Foundation
 
 public struct RESTNetworkService: NetworkService {
     // MARK: - Inputs
-    private let baseURL: String
+    private let baseDomain: String
     
     // MARK: - Life Cycle
-    public init(baseURL: String) {
-        self.baseURL = baseURL
+    public init(baseDomain: String) {
+        self.baseDomain = baseDomain
     }
 }
 
@@ -31,7 +31,7 @@ extension RESTNetworkService {
 extension RESTNetworkService {
     private func createURLRequest(from endpoint: Endpoint) throws -> URLRequest {
         do {
-            return try endpoint.buildURLRequest(with: baseURL)
+            return try endpoint.buildURLRequest(with: baseDomain)
         } catch {
             throw NetworkError.invalidURL
         }

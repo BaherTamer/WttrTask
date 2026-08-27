@@ -12,7 +12,7 @@ public extension Container {
     var networkService: Factory<NetworkService> {
         self {
             RESTNetworkService(
-                baseURL: self.baseURL()
+                baseDomain: self.baseDomain()
             )
         }
         .singleton
@@ -21,7 +21,7 @@ public extension Container {
 
 // MARK: - Private Helpers
 extension Container {
-    private var baseURL: Factory<String> {
+    private var baseDomain: Factory<String> {
         self {
             guard
                 let url = Bundle.main.object(forInfoDictionaryKey: "BASE_DOMAIN") as? String,
