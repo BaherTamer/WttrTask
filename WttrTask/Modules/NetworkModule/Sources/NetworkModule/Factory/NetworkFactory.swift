@@ -24,10 +24,10 @@ extension Container {
     private var baseURL: Factory<String> {
         self {
             guard
-                let url = Bundle.main.object(forInfoDictionaryKey: "BASE_URL") as? String,
+                let url = Bundle.main.object(forInfoDictionaryKey: "BASE_DOMAIN") as? String,
                 !url.isEmpty
             else {
-                fatalError("Missing or invalid BASE_URL in Info.plist. Please set a non-empty string for the BASE_URL key in your target's Info.plist (per configuration).")
+                fatalError("Missing or invalid BASE_DOMAIN in Info.plist. Please set a non-empty string for the BASE_DOMAIN key in your target's Info.plist (per configuration).")
             }
             return url
         }
