@@ -7,13 +7,22 @@
 
 import SwiftUI
 
-struct ErrorScreen: View {
+public struct ErrorScreen: View {
     // MARK: - Inputs
-    let message: String
-    let action: () -> Void
+    private let message: String
+    private let action: () -> Void
+    
+    // MARK: - Life Cycle
+    public init(
+        message: String,
+        action: @escaping () -> Void
+    ) {
+        self.message = message
+        self.action = action
+    }
     
     // MARK: - Body
-    var body: some View {
+    public var body: some View {
         ContentUnavailableView(
             label: titleLabel,
             description: descriptionText,
