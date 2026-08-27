@@ -29,6 +29,7 @@
 		6E4570053040545800421E3A /* Exceptions for "Features" folder in "WttrTask" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				WttrShared,
 				WttrWeather,
 			);
 			target = 000000000000000100000000 /* WttrTask */;
