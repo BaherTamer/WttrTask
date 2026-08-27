@@ -11,10 +11,18 @@ struct TemperatureCelsiusText: View {
     // MARK: - Inputs
     let celsius: Int
     
+    // MARK: - Variables
+    private var temperature: Measurement<UnitTemperature> {
+        Measurement(value: celsius.asDouble, unit: .celsius)
+    }
+    
     // MARK: - Body
     var body: some View {
-        Text(celsius, format: .number)
-            .font(.largeTitle)
-            .fontWeight(.thin)
+        Text(
+            temperature,
+            format: .measurement(width: .abbreviated)
+        )
+        .font(.largeTitle)
+        .fontWeight(.thin)
     }
 }
