@@ -6,6 +6,30 @@
 //
 
 import FactoryKit
+import SwiftUI
+
+// MARK: - Presentation Layer
+@MainActor
+extension Container {
+    public var weatherScreen: Factory<AnyView> {
+        self {
+            let viewModel = self.weatherViewModel()
+            let screen = WeatherScreen(
+                viewModel: viewModel
+            )
+            return AnyView(screen)
+        }
+    }
+    
+    private var weatherViewModel: Factory<WeatherViewModelImp> {
+        self {
+            WeatherViewModelImp(
+                cityConditionUseCase: self.cityConditionUseCase(),
+                lastSearchedCityUseCase: self.lastSearchedCityUseCase()
+            )
+        }
+    }
+}
 
 // MARK: - Domain Layer
 extension Container {

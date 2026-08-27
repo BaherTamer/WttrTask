@@ -5,7 +5,7 @@
 //  Created by Baher Tamer on 27/08/2026.
 //
 
-struct Condition {
+public struct Condition {
     let cityName: String
     let countryName: String
     

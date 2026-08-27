@@ -14,6 +14,10 @@ let package = Package(
     dependencies: [
         // Local
         .package(
+            name: "WttrShared",
+            path: "../WttrShared"
+        ),
+        .package(
             name: "NetworkModule",
             path: "../../Packages/NetworkModule"
         ),
@@ -32,6 +36,7 @@ let package = Package(
             name: "WttrWeather",
             dependencies: [
                 // Local
+                .byName(name: "WttrShared"),
                 .byName(name: "NetworkModule"),
                 .byName(name: "CoreModule"),
                 // Remote
