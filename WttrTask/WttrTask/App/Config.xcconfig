@@ -1,0 +1,11 @@
+//
+//  Config.xcconfig
+//  WttrTask
+//
+//  Created by Baher Tamer on 27/08/2026.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+
+BASE_DOMAIN = wttr.in
