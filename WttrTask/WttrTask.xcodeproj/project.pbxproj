@@ -26,6 +26,13 @@
 			);
 			target = 000000000000000100000000 /* WttrTask */;
 		};
+		6E4570053040545800421E3A /* Exceptions for "Features" folder in "WttrTask" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				WttrWeather,
+			);
+			target = 000000000000000100000000 /* WttrTask */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -45,6 +52,14 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		6E457003304053E100421E3A /* Features */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6E4570053040545800421E3A /* Exceptions for "Features" folder in "WttrTask" target */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +76,7 @@
 			children = (
 				000000000000000000000010 /* WttrTask */,
 				6E456FEB30404D5600421E3A /* Modules */,
+				6E457003304053E100421E3A /* Features */,
 				000000000000000000000020 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,6 +105,7 @@
 			fileSystemSynchronizedGroups = (
 				000000000000000000000010 /* WttrTask */,
 				6E456FEB30404D5600421E3A /* Modules */,
+				6E457003304053E100421E3A /* Features */,
 			);
 			name = WttrTask;
 			productName = MyApp;
