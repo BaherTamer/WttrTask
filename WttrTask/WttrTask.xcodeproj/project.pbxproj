@@ -6,6 +6,11 @@
 	objectVersion = 90;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6E4570163040608500421E3A /* WttrWeather in Frameworks */ = {isa = PBXBuildFile; productRef = 6E4570153040608500421E3A /* WttrWeather */; };
+		6E4570193040608E00421E3A /* CoreModule in Frameworks */ = {isa = PBXBuildFile; productRef = 6E4570183040608E00421E3A /* CoreModule */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		000000000000000000000120 /* WttrTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WttrTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -67,6 +72,8 @@
 		000000000000000130000000 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				6E4570163040608500421E3A /* WttrWeather in Frameworks */,
+				6E4570193040608E00421E3A /* CoreModule in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
@@ -109,6 +116,10 @@
 				6E457003304053E100421E3A /* Features */,
 			);
 			name = WttrTask;
+			packageProductDependencies = (
+				6E4570153040608500421E3A /* WttrWeather */,
+				6E4570183040608E00421E3A /* CoreModule */,
+			);
 			productName = MyApp;
 			productReference = 000000000000000000000120 /* WttrTask.app */;
 			productType = "com.apple.product-type.application";
@@ -137,6 +148,10 @@
 			);
 			mainGroup = 000000000000000000000001;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6E4570143040608500421E3A /* XCLocalSwiftPackageReference "Features/WttrWeather" */,
+				6E4570173040608E00421E3A /* XCLocalSwiftPackageReference "Modules/CoreModule" */,
+			);
 			preferredProjectObjectVersion = 90;
 			productRefGroup = 000000000000000000000020 /* Products */;
 			projectDirPath = "";
@@ -408,6 +423,28 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		6E4570143040608500421E3A /* XCLocalSwiftPackageReference "Features/WttrWeather" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Features/WttrWeather;
+		};
+		6E4570173040608E00421E3A /* XCLocalSwiftPackageReference "Modules/CoreModule" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/CoreModule;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6E4570153040608500421E3A /* WttrWeather */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WttrWeather;
+		};
+		6E4570183040608E00421E3A /* CoreModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreModule;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 000000000000000000000000 /* Project object */;
 }
