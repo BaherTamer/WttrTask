@@ -38,7 +38,6 @@ It serves as an assessment task demonstrating modularization, Clean Architecture
 How the packages depend on each other.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="README%20Content/Diagrams/High-Level-Diagram-dark.png">
   <img alt="High-Level Diagram" src="README%20Content/Diagrams/High-Level-Diagram-light.png">
 </picture>
 
@@ -46,7 +45,6 @@ How the packages depend on each other.
 How the layers are arranged inside a feature module.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="README%20Content/Diagrams/Clean-Architecture-Diagram-dark.png">
   <img alt="Clean Architecture Diagram" src="README%20Content/Diagrams/Clean-Architecture-Diagram-light.png">
 </picture>
 
@@ -54,7 +52,6 @@ How the layers are arranged inside a feature module.
 The flow at runtime during a single city search, and what type the value carries in between.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="README%20Content/Diagrams/Request-Flow-Diagram-dark.png">
   <img alt="Request Flow Diagram" src="README%20Content/Diagrams/Request-Flow-Diagram-light.png">
 </picture>
 
