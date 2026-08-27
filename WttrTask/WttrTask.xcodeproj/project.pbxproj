@@ -22,6 +22,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				CoreModule,
+				NetworkModule,
 			);
 			target = 000000000000000100000000 /* WttrTask */;
 		};
@@ -58,8 +59,8 @@
 		000000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
-				6E456FEB30404D5600421E3A /* Modules */,
 				000000000000000000000010 /* WttrTask */,
+				6E456FEB30404D5600421E3A /* Modules */,
 				000000000000000000000020 /* Products */,
 			);
 			sourceTree = "<group>";
