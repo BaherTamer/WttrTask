@@ -68,7 +68,7 @@ extension WeatherScreen {
     @ViewBuilder
     private var contentView: some View {
         if let condition = viewModel.condition {
-            
+            WeatherCardView(condition: condition)
         }
     }
 }
