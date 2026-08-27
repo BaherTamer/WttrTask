@@ -8,7 +8,7 @@
 import CoreModule
 import Observation
 
-protocol WeatherViewModel: ViewModel {
+public protocol WeatherViewModel: ViewModel {
     var city: String { get set }
     var condition: Condition? { get }
 
