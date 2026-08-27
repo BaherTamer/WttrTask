@@ -1,9 +1,11 @@
 # 🌤️ WttrTask
 `Xcode: 27.0+` `iOS: 27.0+` `Swift: 6.4`
 
-A clean architecture modular iOS weather app built with SwiftUI and powered by Swift Concurrency. Search for any city and get its current conditions from the [wttr.in](https://wttr.in) service.
+A clean architecture modular iOS weather app built with SwiftUI and powered by Swift Concurrency.
 
-The app is deliberately small in scope but fully modularized: five Swift packages behind one thin app target, with each layer isolated behind protocols. It serves as a portfolio project demonstrating modularization, Clean Architecture, and dependency injection applied to a real-world use case rather than a toy example.
+The app is deliberately small in scope but fully modularized: five Swift packages behind one thin app target, with each layer isolated behind protocols.
+
+It serves as an assessment task demonstrating modularization, Clean Architecture, and dependency injection applied to a real-world use case.
 
 <br>
 
@@ -30,8 +32,10 @@ The app is deliberately small in scope but fully modularized: five Swift package
 
 ## 🧩 Diagrams
 
-#### 🔺 High-Level Diagram
-How the packages depend on each other. The app target links only `WttrWeather` and `CoreModule` directly, everything else arrives transitively.
+> These diagrams were generated using Claude AI.
+
+#### 🔻 High-Level Diagram
+How the packages depend on each other.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="README%20Content/Diagrams/High-Level-Diagram-dark.png">
@@ -39,15 +43,15 @@ How the packages depend on each other. The app target links only `WttrWeather` a
 </picture>
 
 #### 🔻 Clean Architecture Diagram
-How the layers are arranged inside a feature module. Both outer layers point inward at the Domain layer, which imports nothing.
+How the layers are arranged inside a feature module.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="README%20Content/Diagrams/Clean-Architecture-Diagram-dark.png">
   <img alt="Clean Architecture Diagram" src="README%20Content/Diagrams/Clean-Architecture-Diagram-light.png">
 </picture>
 
-#### 🔄 Request Flow Diagram
-What crosses each boundary at runtime during a single city search, and what type the value carries at every hop.
+#### 🔻 Request Flow Diagram
+The flow at runtime during a single city search, and what type the value carries in between.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="README%20Content/Diagrams/Request-Flow-Diagram-dark.png">
@@ -57,21 +61,27 @@ What crosses each boundary at runtime during a single city search, and what type
 <br>
 
 ## 🗂️ Modules
-* **`CoreModule:`** Responsible for containing shared abstractions and utilities used across multiple modules, such as the DI resolver, base view model and view state contracts, the `Domainable` mapping protocol, and Foundation extensions.
-* **`NetworkModule:`** Responsible for handling all networking operations, such as building URL requests from endpoints, sending them, validating responses, and mapping transport failures into typed errors.
-* **`WttrShared:`** Responsible for hosting generic views and design constants that are shared between feature modules, such as the reusable error screen, spacing, and sizing values.
-* **`Feature Modules:`** Each module represents a distinct feature in the app and follows a consistent structure based on Clean Architecture principles:
+**`CoreModule:`**
+Responsible for containing shared abstractions and utilities used across multiple modules, such as the DI resolver, base view model and view state contracts, the `Domainable` mapping protocol, and Foundation extensions.
+
+**`NetworkModule:`**
+Responsible for handling all networking operations, such as building URL requests from endpoints, sending them, validating responses, and mapping transport failures into typed errors.
+
+**`WttrShared:`**
+Responsible for hosting generic views and design constants that are shared between feature modules, such as the reusable error screen, spacing, and sizing values.
+
+**`Feature Modules:`**
+Each module represents a distinct feature in the app and follows a consistent structure based on Clean Architecture principles:
   * Divided into Data, Domain, and Presentation layers.
   * Implements the MVVM (Model-View-ViewModel) design pattern.
   * Registers its own dependencies into the shared DI container.
   * Built to be self-contained and modular for scalability and testability.
-  * **`WttrWeather:`** Responsible for the weather feature, covering the search screen, its view model, use cases, repositories, endpoint, and response mapping.
 
 <br>
 
 ## 📦 Dependencies
 This project uses SPM (Swift Package Manager) as dependency manager.
-* **[Factory](https://github.com/hmlongco/Factory):** Responsible for dependency injection and service resolution
+* **[Factory](https://github.com/hmlongco/Factory):** Responsible for dependency injection and service resolving
 
 <br>
 
